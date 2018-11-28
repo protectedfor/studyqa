@@ -21,3 +21,5 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::post('/', 'HomeController@updateHomeText')->name('homeText.update')->middleware('auth');
 
 Route::resource('news', 'FeedsController');
+
+Route::resource('pictures', 'PicturesController')->except('create', 'edit', 'show', 'update');
